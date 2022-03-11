@@ -1,0 +1,248 @@
+:root {
+  --fuenteHeading: "PT Sans", sans-serif;
+  --fuenteParrafos: "Open Sans", sans-serif;
+  --primario: #003a48;
+  --secundario: #ffe2d0;
+  --gris: #e1e1e1;
+  --blanco: #ffffff;
+  --negro: #000000;
+}
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; /* 1 rem = 10px */
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+body {
+  background-color: var(--primario);
+  font-family: var(--fuenteParrafos);
+  font-size: 1.6rem;
+  line-height: 2;
+}
+
+/** Globales **/
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+
+.container .container__image {
+  position: relative;
+  width: 50%;
+  height: 100%;
+}
+
+.container .container__bienvenida {
+  background-color: var(--secundario);
+  position: relative;
+  border-radius: 5rem;
+  margin: 150px;
+  width: 100%;
+  height: 70%;
+}
+
+.container .container__image:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(255deg, #e91e63, #03a9f4);
+  z-index: 1;
+  mix-blend-mode: screen;
+}
+
+/* .container .container__image img { */
+.container .container__image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* .container .content-data { */
+.content-data {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--fuenteHeading);
+  line-height: 1.2;
+}
+h1 {
+  font-size: 4.8rem;
+}
+h2 {
+  font-size: 4rem;
+}
+h3 {
+  font-size: 3.2rem;
+}
+h4 {
+  font-size: 2.8rem;
+}
+img {
+  max-width: 100%;
+}
+.centrar-texto {
+  text-align: center;
+}
+.centrar-texto--o {
+  display: inline-block;
+  margin: auto;
+  color: var(--blanco);
+  text-align: center;
+  font-weight: normal;
+  letter-spacing: 2pt;
+  width: 100%;
+}
+
+.centrar-texto--bienvenida {
+  position: fixed;
+  color: var(--blanco);
+  text-align: center;
+  font-weight: bold;
+  width: 100%;
+}
+
+.centrar-texto--bienvenida h3 {
+  margin-bottom: 10px;
+}
+
+/* .container .content-data .formulario { */
+.formulario {
+  width: 50%;
+}
+
+.contenedor__line {
+  max-width: 280px;
+  border-top: 3px solid var(--blanco);
+}
+
+/* .container .content-data .formulario h2 { */
+.formulario h2 {
+  color: var(--blanco);
+  font-weight: 600;
+  font-size: 3rem;
+  margin-bottom: 20px;
+  display: inline-block;
+  letter-spacing: 1px;
+}
+
+/* .container .content-data .formulario .formulario__campos { */
+.formulario__campos {
+  margin-bottom: 20px;
+}
+
+/* .container .content-data .formulario .formulario__campos span { */
+.formulario__campos span {
+  font-size: 18px;
+  margin-bottom: 5px;
+  display: inline-block;
+  color: var(--blanco);
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+/* .container .content-data .formulario .formulario__campos input { */
+.formulario__campos input {
+  width: 100%;
+  padding: 10px 20px;
+  outline: none;
+  font-weight: 400;
+  border: 1px solid #607dbb;
+  font-size: 16px;
+  letter-spacing: 1px;
+  color: var(--negro);
+  background: transparent;
+  background-color: var(--secundario);
+  border-radius: 5px;
+}
+
+/* .container .content-data .formulario .formulario__campos .formulario__btn { */
+.formulario__campos .formulario__btn {
+  background: #00bb2d;
+  color: var(--blanco);
+  font-style: bold;
+  outline: none;
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* .container .content-data .formulario .formulario__campos .formulario__btn:hover { */
+.formulario__btn:hover {
+  background-color: #03a9f4;
+}
+
+/* .container .content-data .formulario .formulario__remember { */
+.formulario__remember {
+  margin-bottom: 10px;
+  padding: 1.5rem;
+  color: var(--blanco);
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.formulario__remember span {
+  margin-left: 15px;
+}
+
+/* .container .content-data .formulario .formulario__campos p {
+    color: #607d8b;
+} */
+
+@media (max-width: 768px) {
+  .container .container__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .container .container__bienvenida {
+    background-color: var(--secundario);
+    position: relative;
+    margin: 120px 30px 30px 30px;
+    width: 100%;
+    height: 80%;
+  }
+
+  .container .content-data {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+
+  .container .content-data .formulario {
+    width: 100%;
+    padding: 40px;
+    background-color: rgb(1 57 73 / 0.9);
+  }
+  .container .content-data .formulario h3 {
+    color: var(--blanco);
+    text-align: center;
+    margin: 30px 0 10px;
+    font-weight: 500;
+  }
+}
